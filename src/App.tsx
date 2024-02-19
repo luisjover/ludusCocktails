@@ -1,14 +1,14 @@
 
-import "./css/reset.css";
+import { RouterPaths } from "./routes/RouterPaths.routes";
+
 
 const App = () => {
 
-
   return (
-    <div>
 
-    </div>
+    <RouterPaths />
+
   )
 }
 
-export default App
+export default App;
