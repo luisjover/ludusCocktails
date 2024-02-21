@@ -1,15 +1,11 @@
+import DrinkData from "../../../types/DrinkData"
 
 
-export type DrinkProps = {
-    id: string,
-    name: string,
-    instructions: string,
-    alcoholic: string,
-    image: string | undefined,
-    ingredients: string[],
+export type Props = {
+    drink: DrinkData
 }
 
-const Card = (drink: DrinkProps) => {
+const Card = ({ drink }: Props) => {
     return (
         <div>
             <div>

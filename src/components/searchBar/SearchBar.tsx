@@ -1,40 +1,73 @@
 
 import "./searchbar.css";
-import useSearchFilterContext from "../../utils/hooks/useFilterContext";
-import { useEffect } from "react";
+import { useState, useEffect, ChangeEvent } from "react";
 
 
-const SearchBar = () => {
+type SearchBarProps = {
+    allIngredientsList: string[] | null;
+    onOptionSelect: (option: string) => void;
+}
 
-    //Custom hook to get the needed filter context states to use the searchbar
-    const { searchFilter, changeSearchFilter } = useSearchFilterContext();
 
-    //Function to handle the search filter changes and mutate the context state
-    const handleSearchFilterChange = (searchParam: string) => {
-        if (searchParam === "") {
-            changeSearchFilter(null);
-        } else {
-            changeSearchFilter(searchParam);
-        }
-    }
+const SearchBar = ({ allIngredientsList, onOptionSelect }: SearchBarProps) => {
+
+    const [searchTerm, setSearchTerm] = useState<string>("");
+    const [filteredOptions, setFilteredOptions] = useState<string[] | null>(null);
+
 
 
     useEffect(() => {
-        console.log(searchFilter)
+        // Filter options based on searcchTerm
+        const filtered = allIngredientsList?.filter(ingredient =>
+            ingredient.toLowerCase().includes(searchTerm?.toLowerCase())
+        );
 
-    }, [searchFilter])
+        filtered && setFilteredOptions(filtered);
+    }, [searchTerm, allIngredientsList]);
+
+
+    const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
+        setSearchTerm(event.target.value);
+    };
+
+    const handleOptionClick = (option: string) => {
+        setSearchTerm(option);
+        onOptionSelect(option);
+    };
 
 
     return (
 
-        <input
-            className="search-input"
-            type="text"
-            placeholder="Search ingredient..."
-            value={searchFilter ? searchFilter : ""}
-            onChange={(e) => handleSearchFilterChange(e.target.value)}
-        />
+        <div className="search-container">
+            <input
+                name="search-input"
+                className="search-input"
+                type="text"
+                placeholder="Search ingredient..."
+                value={searchTerm ? searchTerm : ""}
+                onChange={handleInputChange}
+            />
 
+            {/* Render dropdown if there are any filtered options matching searchterm after third letter or "missing ingredient" if not */}
+
+            {searchTerm.length >= 3 ? (
+                <ul className="search-dropdown">
+                    {filteredOptions?.length && filteredOptions.length > 0 ? (
+                        filteredOptions.map(option => (
+                            <li
+                                className="dropdown-item"
+                                key={option}
+                                onClick={() => handleOptionClick(option)}
+                            >
+                                {option}
+                            </li>
+                        ))
+                    ) : (
+                        <li className="dropdown-item">Ingredient not available</li>
+                    )}
+                </ul>
+            ) : null}
+        </div>
     )
 }
 
