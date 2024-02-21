@@ -1,4 +1,3 @@
-// import axios from "axios";
 
 import { axiosInstance } from "./base.api";
 
@@ -7,18 +6,14 @@ const endpoint = "list.php?i=list";
 //GET ALL INGREDIENTS LIST
 export const ingredients = {
     getAll: async () => {
-        return await axiosInstance.get(endpoint)
+        try {
+            const response = await axiosInstance.get(endpoint);
+            // Return obbject with data and state
+            return { data: response.data, success: true };
+        } catch (error) {
+
+            console.error("Error fetching data:", error);
+            return { data: null, success: false, error: "Error fetching data" };
+        }
     }
-
-}
-
-
-
-// export const getAllIngredients = async () => {
-//     try {
-//         const response = await axios.get('https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list');
-//         console.log(response.data);
-//     } catch (error) {
-//         console.error(error);
-//     }
-// }
+};
