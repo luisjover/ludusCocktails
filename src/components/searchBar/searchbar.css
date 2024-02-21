@@ -1,0 +1,59 @@
+/* style for search container, including space for ingredients search matches */
+.search-container {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    height: 90px;
+    gap: 10px;
+    border-bottom: 1px solid #e1e4e8;
+    padding-bottom: 10px;
+}
+
+
+/* Base style for search input */
+.search-input {
+    width: 100%;
+    min-width: 200px;
+    padding: 5px 10px;
+    border: 1px solid #d1d5da;
+    border-radius: 6px;
+    font-size: 16px;
+    background-color: #f6f8fa;
+    color: #24292e;
+    transition: border 0.3s;
+}
+
+/* Style for input focus */
+.search-input:focus {
+    outline: none;
+    border-color: #0366d6;
+    box-shadow: 0 0 0 3px rgba(3, 102, 214, 0.1);
+}
+
+
+.search-dropdown {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    padding-left: 10px;
+}
+
+.dropdown-item {
+    display: inline-block;
+    padding: 5px 10px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid #83dc9c;
+    color: #5384ac;
+    background-color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.dropdown-item:hover {
+    background-color: #f59648;
+    color: #fff;
+    border-color: #fff;
+}
