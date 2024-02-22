@@ -7,15 +7,15 @@
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /*
     2. Remove default margin
   */
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 
 }
 
@@ -25,10 +25,9 @@
     4. Improve text rendering
   */
 body {
-    line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-    scroll-behavior: smooth;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
 }
 
 
@@ -40,8 +39,8 @@ picture,
 video,
 canvas,
 svg {
-    display: block;
-    max-width: 100%;
+  display: block;
+  max-width: 100%;
 }
 
 /*
@@ -51,7 +50,7 @@ input,
 button,
 textarea,
 select {
-    font: inherit;
+  font: inherit;
 }
 
 /*
@@ -64,7 +63,7 @@ h3,
 h4,
 h5,
 h6 {
-    overflow-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 /*
@@ -72,7 +71,7 @@ h6 {
   */
 #root,
 #__next {
-    isolation: isolate;
+  isolation: isolate;
 }
 
 
@@ -80,13 +79,13 @@ a,
 a:hover,
 a:active,
 a:visited {
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: black;
 }
 
 /* INDEX STYLES */
 
 h1,
 h2 {
-    font-family: "Nunito", sans-serif;
+  font-family: "Oxygen", sans-serif;
 }
