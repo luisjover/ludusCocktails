@@ -63,7 +63,7 @@ const SearchBar = ({ allIngredientsList, onOptionSelect }: SearchBarProps) => {
                             </li>
                         ))
                     ) : (
-                        <li className="dropdown-item">Ingredient not available</li>
+                        <li className="dropdown-error">Ingredient not available</li>
                     )}
                 </ul>
             ) : null}

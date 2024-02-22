@@ -1,18 +1,19 @@
-import DrinkData from "../../../types/DrinkData";
+import "./list.css";
+import { AppDrinkData } from "../../../types/DrinkData";
 import Card from "../card/Card";
 
-type Props = {
 
-}
 
-const List = () => {
+const List = ({ drinks }: { drinks: AppDrinkData[] }) => {
+
     return (
-        <div>
-            {/* {drinks.map((drink) => (
+        <div className="list-container">
+            {drinks.map((drink) => (
                 <Card
+                    key={drink.idDrink}
                     drink={drink}
                 ></Card>
-            ))} */}
+            ))}
 
         </div>
     )

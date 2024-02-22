@@ -1,21 +1,33 @@
-import DrinkData from "../../../types/DrinkData"
+import "./card.css";
+import { AppDrinkData } from "../../../types/DrinkData";
 
 
-export type Props = {
-    drink: DrinkData
-}
-
-const Card = ({ drink }: Props) => {
+const Card = ({ drink }: { drink: AppDrinkData }) => {
     return (
-        <div>
+        <div className="card-container">
             <div>
-                <img src={drink.image} alt={`${drink.name} cocktail image`} />
+                {drink.strDrinkThumb ? (
+                    <img src={drink.strDrinkThumb} alt={`${drink.strDrink} cocktail image`} className="image" />
+                ) : (
+                    <span>No image available</span>
+                )}
             </div>
-            <h3>{drink.name}</h3>
-            {drink.ingredients.map((ingredient) => (
-                <p key={ingredient}>{ingredient}</p>
-            ))}
-            <p>{drink.instructions}</p>
+            <h3>{drink.strDrink}</h3>
+            <div className="ingredients-container">
+                <div className="ingredients">
+                    {drink.ingredients.map((ingredient, index) => (
+                        <p key={`ingredient-${index}`}>{ingredient}</p>
+                    ))}
+                </div>
+                <div className="measures">
+                    {drink.measures.map((measure, index) => (
+                        <p key={`measure-${index}`}>{measure}</p>
+                    ))}
+                </div>
+            </div>
+            <div className="instructions">
+                <p>{drink.strInstructions}</p>
+            </div>
 
         </div>
     )
