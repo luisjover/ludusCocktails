@@ -5,7 +5,7 @@
     align-items: center;
     gap: 20px;
     color: white;
-    height: 15dvh;
+    height: 10dvh;
     background: rgb(131, 220, 156);
     background: linear-gradient(90deg, rgba(131, 220, 156, 1) 0%, rgba(83, 132, 172, 1) 100%);
 }

@@ -1,0 +1,41 @@
+.card-container {
+    height: calc(80dvh - 200px);
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+    background-color: rgba(102, 166, 166, 0.6);
+    padding: 20px 15px;
+    overflow: hidden;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+
+.image {
+    height: 150px;
+    width: 150px;
+}
+
+.ingredients-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+}
+
+.ingredients {
+    text-align: left;
+}
+
+.measures {
+    text-align: right;
+}
+
+.instructions {
+    text-align: left;
+}
