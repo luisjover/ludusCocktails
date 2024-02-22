@@ -7,4 +7,14 @@
     height: 10dvh;
     background: rgb(255, 120, 13);
     background: linear-gradient(90deg, rgba(255, 120, 13, 1) 0%, rgba(255, 246, 95, 1) 100%);
+    transition: height 0.3s ease;
+}
+
+
+/*MEDIA QUERIES*/
+
+@media only screen and (max-width: 1500px) {
+    .footer {
+        height: 15dvh;
+    }
 }

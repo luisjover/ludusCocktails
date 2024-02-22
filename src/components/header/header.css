@@ -8,6 +8,7 @@
     height: 10dvh;
     background: rgb(131, 220, 156);
     background: linear-gradient(90deg, rgba(131, 220, 156, 1) 0%, rgba(83, 132, 172, 1) 100%);
+    transition: height 0.3s ease;
 }
 
 .header-icon {
@@ -21,13 +22,16 @@
     -o-transition: all 0.3s ease;
 }
 
-@media only screen and (max-width: 600px) {
+/*MEDIA QUERIES*/
+
+@media only screen and (max-width: 1500px) {
     .header {
-        flex-direction: column;
+        height: 15dvh;
     }
 }
 
-@media only screen and (max-width: 460px) {
+@media only screen and (max-width: 550px) {
+
     .header-icon {
         width: 80px;
         height: 80px;

@@ -4,19 +4,28 @@
     flex-direction: column;
     justify-content: space-between;
     margin: 0 auto;
-    padding-bottom: 30px;
 }
 
-@media only screen and (max-width: 1450px) {
+@media only screen and (max-width: 1500px) {
     .content-container {
-        width: 700px;
-        gap: 100px;
+        width: 1000px;
+        align-items: center;
+        gap: 50px;
     }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 820px) {
     .content-container {
-        width: 450px;
-        gap: 100px;
+        width: 550px;
+        align-items: center;
+        gap: 40px;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .content-container {
+        width: 400px;
+        align-items: center;
+        gap: 30px;
     }
 }
