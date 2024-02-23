@@ -14,25 +14,9 @@ import { hasSixOrLessIngredients, orderDrinksByAlcohol } from "../../utils/helpe
 const Content = () => {
 
     const [allIngredients, setAllIngredients] = useState<string[] | null>(null);
-    const [filteredDrinks, setFilteredDrinks] = useState<AppDrinkData[]>([])
+    const [filteredDrinks, setFilteredDrinks] = useState<AppDrinkData[]>([]);
+    const [defaultValues, setDefaultValues] = useState<boolean>(false);
 
-    useEffect(() => {
-        ingredients.getAll()
-            .then((response: { data: IngredientsListData | null, success: boolean, error?: string }) => {
-                if (response.success && response.data) {
-                    const ingredientsList = response.data.drinks.map(
-                        (ingredient) => ingredient.strIngredient1
-                    );
-                    setAllIngredients(ingredientsList);
-                } else {
-                    console.error("Error fetching dataaaaa:", response.error);
-
-                }
-            })
-            .catch((error) => {
-                console.error("Unexpected error:", error);
-            });
-    }, []);
 
     const handleOptionSelect = (selectedOption: string) => {
         getAllDrinksByIngredient(selectedOption)
@@ -96,6 +80,30 @@ const Content = () => {
 
             });
     };
+
+
+    const getIngredients = async () => {
+        try {
+            const response: { data: IngredientsListData | null, success: boolean, error?: string } = await ingredients.getAll();
+            if (response.success && response.data) {
+                const ingredientsList = response.data.drinks.map(
+                    (ingredient) => ingredient.strIngredient1
+                );
+                setAllIngredients(ingredientsList);
+                setDefaultValues(true);
+            } else {
+                console.error("Error fetching data:", response.error);
+            }
+        } catch (error) {
+            console.error("Unexpected error:", error);
+        }
+    };
+
+
+    useEffect(() => {
+        if (defaultValues) return;
+        getIngredients();
+    }, []);
 
 
 
