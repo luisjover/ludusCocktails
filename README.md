@@ -1,9 +1,9 @@
-# LUDUS Team Party 🍸​
+# 🍸​ LUDUS Team Party 🍸​
 
 
-<img width="200"  alt="MovieHub" src="https://github.com/luisjover/MVST_github_repos/assets/129792624/35172c4e-4e54-4436-a174-6f72a62844e4">
-<img width="600"  alt="MovieHub" src="https://github.com/luisjover/MVST_github_repos/assets/129792624/661ee3cd-bdb1-4b30-b9dd-70b964f95cc1">
-<img width="200"  alt="MovieHub" src="https://github.com/luisjover/MVST_github_repos/assets/129792624/3f4b7211-a79d-4808-a5d2-bb0fef6c7757">
+<img width="200"  alt="iphoneApp" src="https://github.com/luisjover/ludusCocktails/assets/129792624/3dbff5a6-a5b5-4df5-9a17-6a4b123a145c">
+<img width="600"  alt="macbookApp" src="https://github.com/luisjover/ludusCocktails/assets/129792624/19d86629-728d-4b58-a968-eafdcabc163f">
+<img width="200"  alt="ipadApp" src="https://github.com/luisjover/ludusCocktails/assets/129792624/82d3c4e4-1733-4cd9-b1fa-598e4f5f1e65">
 
 
 
@@ -65,4 +65,4 @@ npm test
 - Implement StoryBook and create variants for components
 
 
-## <a href="">Grab your drink!</a> 🍸​
+## 🍸​ <a href="">Grab your drink!</a> 🍸​
