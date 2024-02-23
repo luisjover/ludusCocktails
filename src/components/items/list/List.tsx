@@ -1,6 +1,6 @@
 import "./list.css";
 import { AppDrinkData } from "../../../types/DrinkData";
-import Card from "../card/Card";
+import { Card } from "../card";
 
 
 

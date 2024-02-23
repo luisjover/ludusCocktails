@@ -1,7 +1,7 @@
 import "./content.css";
 import { useEffect, useState } from "react";
-import SearchBar from "../searchBar/SearchBar";
-import List from "../items/list/List";
+import { SearchBar } from "../searchBar";
+import { List } from "../items/list";
 import { ingredients } from "../../api/ingredients";
 import { IngredientsListData } from "../../types/IngredientData";
 import { getAllDrinksByIngredient, getDrinkById } from "../../api/drinks";

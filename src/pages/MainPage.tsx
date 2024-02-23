@@ -1,7 +1,7 @@
 
 import "./mainpage.css";
 import { FilterProvider } from "../contexts/SearchFilterContext";
-import Content from "../components/content/Content";
+import { Content } from "../components/content";
 
 
 
