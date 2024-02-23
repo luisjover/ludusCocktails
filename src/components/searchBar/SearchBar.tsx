@@ -15,6 +15,15 @@ const SearchBar = ({ allIngredientsList, onOptionSelect }: SearchBarProps) => {
     const [filteredOptions, setFilteredOptions] = useState<string[] | null>(null);
 
 
+    const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
+        setSearchTerm(event.target.value);
+    };
+
+    const handleOptionClick = (option: string) => {
+        setSearchTerm(option);
+        onOptionSelect(option);
+    };
+
 
     useEffect(() => {
         // Filter options based on searcchTerm
@@ -24,16 +33,6 @@ const SearchBar = ({ allIngredientsList, onOptionSelect }: SearchBarProps) => {
 
         filtered && setFilteredOptions(filtered);
     }, [searchTerm, allIngredientsList]);
-
-
-    const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
-        setSearchTerm(event.target.value);
-    };
-
-    const handleOptionClick = (option: string) => {
-        setSearchTerm(option);
-        onOptionSelect(option);
-    };
 
 
     return (
@@ -50,7 +49,7 @@ const SearchBar = ({ allIngredientsList, onOptionSelect }: SearchBarProps) => {
 
             {/* Render dropdown if there are any filtered options matching searchterm after third letter or "missing ingredient" if not */}
 
-            {searchTerm.length >= 3 ? (
+            {searchTerm.length >= 3 && (
                 <ul className="search-dropdown">
                     {filteredOptions?.length && filteredOptions.length > 0 ? (
                         filteredOptions.map(option => (
@@ -66,7 +65,7 @@ const SearchBar = ({ allIngredientsList, onOptionSelect }: SearchBarProps) => {
                         <li className="dropdown-error">Ingredient not available</li>
                     )}
                 </ul>
-            ) : null}
+            )}
         </div>
     )
 }
