@@ -21,7 +21,7 @@ Small application that consumes data from a drinks and cocktails API and returns
 
 It is fully responsive, working correctly on any device, whether mobile, tablet or desktop.
 
-Check deployed project <a href="">here</a>
+Check deployed project <a href="https://ludus-cocktails.vercel.app/">here</a>
 
 
 ## Technologies
@@ -50,19 +50,13 @@ npm install
 ```
 npm run dev
 ```
-<br />
-For runing the tests suite
 
-```
-npm test
-```
 
 ## Future Improvements
-- Authenticate the user: I would like to implement a login with Auth0 or some similar tool. Using the login email (login with GitHub) the application is prepared to, with a few simple adaptations, show its own repositories to the user who logs in, instead of mine.
-- Replace authentication with Github token with authentication with App: I would like to make the authentication process dynamic, so that you would not have to go to GitHub to generate the access token, replacing it with a JWT, in this case for example Auth0.
-- Being able to see the repositories of other users: the two queries (userData and repositoriesData) have been built with variables, so that in the future it would be easy to add a small search engine to see not only my repositories, but those of any user.
-- Implement tests
-- Implement StoryBook and create variants for components
+- Add filtering options on alcohol content as well as options for ordering drinks.
+- Refactor styles using Tailwind CSS.
+- Implement Storybook and create some component variants.
+- Implement Unit testing using Vitest, Jest and React-testing-library. 
 
 
-## 🍸​ <a href="">Grab your drink!</a> 🍸​
+## 🍸​ <a href="https://ludus-cocktails.vercel.app/">Grab your drink!</a> 🍸​
