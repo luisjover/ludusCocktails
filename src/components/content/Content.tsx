@@ -84,10 +84,10 @@ const Content = () => {
                                 measures: measuresArray,
                                 strInstructions: detailedDrink.strInstructions,
                             });
-
-                            // Add ID to visited ID´s Set to control not repeating drink
-                            visitedIds.add(randomDrink.idDrink);
                         }
+
+                        // Add ID to visited ID´s Set to control not repeating drink
+                        visitedIds.add(randomDrink.idDrink);
                     }
                 }
 
