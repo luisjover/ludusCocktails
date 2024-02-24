@@ -34,6 +34,7 @@ Check deployed project <a href="https://ludus-cocktails.vercel.app/">here</a>
 - react-spinners
 - react-router-dom
 - Axios
+- Tailwind CSS
 
 
 ## Setup
@@ -54,7 +55,6 @@ npm run dev
 
 ## Future Improvements
 - Add filtering options on alcohol content as well as options for ordering drinks.
-- Refactor styles using Tailwind CSS.
 - Implement Storybook and create some component variants.
 - Implement Unit testing using Vitest, Jest and React-testing-library. 
 
