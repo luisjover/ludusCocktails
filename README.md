@@ -48,10 +48,6 @@ npm install
 
 ```
 
-```
-npm run dev
-```
-
 
 ## Future Improvements
 - Add filtering options on alcohol content as well as options for ordering drinks.
