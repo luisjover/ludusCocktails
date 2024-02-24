@@ -34,6 +34,7 @@ Check deployed project <a href="">here</a>
 - react-spinners
 - react-router-dom
 - Axios
+- Tailwind CSS
 
 
 ## Setup
@@ -50,12 +51,7 @@ npm install
 ```
 npm run dev
 ```
-<br />
-For runing the tests suite
 
-```
-npm test
-```
 
 ## Future Improvements
 - Authenticate the user: I would like to implement a login with Auth0 or some similar tool. Using the login email (login with GitHub) the application is prepared to, with a few simple adaptations, show its own repositories to the user who logs in, instead of mine.
