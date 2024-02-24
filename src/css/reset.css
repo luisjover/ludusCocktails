@@ -28,6 +28,7 @@ body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   scroll-behavior: smooth;
+  font-family: "Oxygen", sans-serif;
 }
 
 
@@ -81,11 +82,4 @@ a:active,
 a:visited {
   text-decoration: none;
   color: black;
-}
-
-/* INDEX STYLES */
-
-h1,
-h2 {
-  font-family: "Oxygen", sans-serif;
 }

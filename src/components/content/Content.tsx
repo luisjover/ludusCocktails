@@ -1,4 +1,3 @@
-import "./content.css";
 import { useEffect, useState } from "react";
 import { SearchBar } from "../searchBar";
 import { List } from "../items/list";
@@ -97,10 +96,8 @@ const Content = () => {
             });
     };
 
-
-
     return (
-        <div className="content-container">
+        <div className="flex flex-col w-full justify-between my-0 mx-auto gap-[30px] items-center sm:gap-10 md:gap-[50px] md:w-[1000px] 2xl:w-full 2xl:items-baseline">
             <SearchBar
                 allIngredientsList={allIngredients}
                 onOptionSelect={handleOptionSelect}
